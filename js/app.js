@@ -1,43 +1,40 @@
 const data = {
     '1': {
-        'question': 'Combien font <code>2\xB2</code>',
-        'answer': '4'
+        question: 'Combien font <code>2\xB2</code>',
+        answer: '4',
     },
     '2': {
-        'question': 'Combien font <code>3\xB2</code>',
-        'answer': '9'
-    }
+        question: 'Combien font <code>3\xB2</code>',
+        answer: '9',
+    },
 }
 
 const $ = selector => document.querySelector(selector)
 
-function fadeIn({
-    style
-}) {
-    style.display = '';
-    let last = +new Date;
+function fadeIn({ style }) {
+    style.display = ''
+    let last = +new Date()
     const tick = () => {
-        style.opacity = +style.opacity + (new Date - last) / 400;
-        last = +new Date;
+        style.opacity = +style.opacity + (new Date() - last) / 400
+        last = +new Date()
         if (+style.opacity < 1) {
-            window.requestAnimationFrame && requestAnimationFrame(tick) || setTimeout(tick, 16)
+            ;(window.requestAnimationFrame && requestAnimationFrame(tick)) ||
+                setTimeout(tick, 16)
         }
-    };
+    }
     tick()
 }
 
-function fadeOut({
-    style
-}) {
-    style.opacity = 1;
-    (function fade() {
-        if ((style.opacity -= .1) < 0) {
+function fadeOut({ style }) {
+    style.opacity = 1
+    ;(function fade() {
+        if ((style.opacity -= 0.1) < 0) {
             style.display = 'none'
         } else {
             requestAnimationFrame(fade)
         }
     })()
-};
+}
 
 const min = 1
 const max = 2

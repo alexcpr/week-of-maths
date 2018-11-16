@@ -1,0 +1,40 @@
+{
+  "name": "week-of-maths",
+  "version": "1.0.0",
+  "description": "Jeux-questionnaires mathématiques pour la Semaine des mathématiques",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint js/app.js --fix",
+    "build": "gulp",
+    "build-js": "gulp js",
+    "build-css": "gulp css",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binksxela/week-of-maths.git"
+  },
+  "author": "binksxela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binksxela/week-of-maths/issues"
+  },
+  "homepage": "https://github.com/binksxela/week-of-maths#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "prettier-eslint": "^8.8.2"
+  }
+}
